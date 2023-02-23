@@ -1,9 +1,9 @@
 class Subscription < ApplicationRecord
-  enum status: %i[inactive active]
   validates :title, presence: true
-  validates :price, presence: true
+  validates :price, numericality: true
   validates :status, presence: true
-  validates :frequency, presence: true
+  validates :frequency, numericality: { only_integer: true }
+  enum status: %i[inactive active]
 
   belongs_to :customer
   has_many :subscription_teas

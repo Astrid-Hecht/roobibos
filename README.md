@@ -43,7 +43,7 @@
           [{:id=>237,
             :customer_id=>159,
             :title=>"Oolong",
-            :price=>80.14226838925632,
+            :price=>80.14,
             :status=>"active",
             :frequency=>37,
             :created_at=>"2023-02-23T06:24:34.145Z",
@@ -63,7 +63,20 @@
       frequency: 4 <weeks> }
     ```
 
-    The response will also be in the above format, but will show the updated data if successful.
+    The response will also be in the following format, and will show the updated data if successful.
+
+    ```
+     "data": {
+        "id": "2",
+        "type": "subscription",
+        "attributes": {
+            "title": "Green",
+            "price": 87.45,
+            "frequency": 26,
+            "status": "inactive"
+        }
+    }
+    ```
 
 ### Future Plans
   * Use time before it's due to refactor the db to have a many to many relationship between customers and subscriptions. This would allow the service to release subsription options with pre-set parameters that many users could subscribe to. Transitioning the current subscription relation to a custom subsription option would allow for the current flexibility of subscriptions to persist in a different form.
