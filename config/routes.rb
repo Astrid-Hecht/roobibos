@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :customer_subscriptions
   namespace :api do
     namespace :v1 do
       resources :customers, only: [:show]

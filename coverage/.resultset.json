@@ -5,7 +5,7 @@
         "lines": [
           1,
           1,
-          1,
+          null,
           1,
           1,
           1,
@@ -20,14 +20,6 @@
           null
         ]
       },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/models/customer_subscription.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          null
-        ]
-      },
       "/Users/astrid/z_turing/4m/projects/roobibos/app/models/subscription.rb": {
         "lines": [
           1,
@@ -37,7 +29,6 @@
           1,
           1,
           null,
-          1,
           1,
           1,
           1,
@@ -65,9 +56,57 @@
           null
         ]
       },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/api/v1/customers_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/serializers/customer_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null
+        ]
+      },
       "/Users/astrid/z_turing/4m/projects/roobibos/app/mailers/application_mailer.rb": {
         "lines": [
           0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/serializers/subscription_serializer.rb": {
+        "lines": [
+          0,
+          0,
+          null,
           0,
           0,
           0
@@ -83,15 +122,7 @@
         "branches": {
         }
       },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/application_controller.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/customer_subscriptions_controller.rb": {
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/api/v1/subscriptions_controller.rb": {
         "lines": [
           0,
           0,
@@ -148,7 +179,7 @@
         "branches": {
         }
       },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/customers_controller.rb": {
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/api/v1/subscription_teas_controller.rb": {
         "lines": [
           0,
           0,
@@ -205,121 +236,7 @@
         "branches": {
         }
       },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/subscriptions_controller.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/subscription_teas_controller.rb": {
-        "lines": [
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/teas_controller.rb": {
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/api/v1/teas_controller.rb": {
         "lines": [
           0,
           0,
@@ -397,6 +314,6 @@
         }
       }
     },
-    "timestamp": 1677126152
+    "timestamp": 1677130951
   }
 }
