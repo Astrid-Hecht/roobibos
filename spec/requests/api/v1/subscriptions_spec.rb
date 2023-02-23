@@ -103,7 +103,7 @@ RSpec.describe '/subscriptions', type: :request do
         subscription = create(:subscription, customer: customer)
         patch api_v1_subscription_url(subscription),
               params: { subscription: invalid_attributes }, headers: valid_headers, as: :json
-        expect(response).to have_http_status(:unprocessable_entity)
+        expect(response).to have_http_status(400)
         expect(response.content_type).to match(a_string_including('application/json'))
       end
     end
@@ -151,7 +151,7 @@ RSpec.describe '/subscriptions', type: :request do
         expect(body[:error]).to be_a Array
         expect(body[:error][0].keys).to eq(%i[status message code])
         expect(body[:error][0][:status]).to eq('BAD REQUEST')
-        expect(body[:error][0][:message]).to eq('Missing or invalid item paramters')
+        expect(body[:error][0][:message]).to eq('Missing or invalid object paramters')
         expect(body[:error][0][:code]).to eq(400)
       end
 

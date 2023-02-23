@@ -7,7 +7,7 @@ module Api
     end
 
     def render_bad_request
-      render json: ErrorSerializer.new(Error.new('Missing or invalid item paramters', 'BAD REQUEST', 400)).serialized_json, status: :bad_request
+      render json: ErrorSerializer.new(Error.new('Missing or invalid object paramters', 'BAD REQUEST', 400)).serialized_json, status: :bad_request
       false
     end
 
