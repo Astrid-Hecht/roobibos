@@ -13,7 +13,7 @@
 
 ### Planning Schema
 
-![Schema diagram](https://github.com/Astrid-Hecht/roobibos/tree/main/public/schema.png?raw=true)
+![Schema diagram](https://github.com/Astrid-Hecht/roobibos/blob/main/public/schema.png?raw=true)
 
 ### Setup Instructions
   * Fork and clone this repo
