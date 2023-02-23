@@ -1,0 +1,327 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/models/customer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/models/subscription.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/models/subscription_tea.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/models/tea.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/customers_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/subscriptions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/teas_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null,
+          1,
+          null,
+          1,
+          0,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/jobs/application_job.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/subscription_teas_controller.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/channels/application_cable/connection.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/channels/application_cable/channel.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      }
+    },
+    "timestamp": 1677123419
+  }
+}

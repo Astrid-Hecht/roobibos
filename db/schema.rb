@@ -15,15 +15,6 @@ ActiveRecord::Schema.define(version: 2023_02_23_031015) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "create_subscription_teas", force: :cascade do |t|
-    t.bigint "tea_id"
-    t.bigint "subscription_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["subscription_id"], name: "index_create_subscription_teas_on_subscription_id"
-    t.index ["tea_id"], name: "index_create_subscription_teas_on_tea_id"
-  end
-
   create_table "customers", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -31,6 +22,15 @@ ActiveRecord::Schema.define(version: 2023_02_23_031015) do
     t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "subscription_teas", force: :cascade do |t|
+    t.bigint "tea_id"
+    t.bigint "subscription_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["subscription_id"], name: "index_subscription_teas_on_subscription_id"
+    t.index ["tea_id"], name: "index_subscription_teas_on_tea_id"
   end
 
   create_table "subscriptions", force: :cascade do |t|
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2023_02_23_031015) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "create_subscription_teas", "subscriptions"
-  add_foreign_key "create_subscription_teas", "teas"
+  add_foreign_key "subscription_teas", "subscriptions"
+  add_foreign_key "subscription_teas", "teas"
   add_foreign_key "subscriptions", "customers"
 end
