@@ -34,6 +34,26 @@ RSpec.describe '/subscriptions', type: :request do
 
   describe 'PATCH /update' do
     context 'with valid parameters' do
+      it "can't update anything other than status" do
+        customer = create(:customer)
+        customer2 = create(:customer)
+        subscription = create(:subscription, customer: customer, status: 0)
+        expect(subscription.status).to eq('inactive')
+        initial_values = { title: subscription.title, frequency: subscription.frequency }
+        patch api_v1_subscription_url(subscription),
+              params: { id: subscription.id, customer_id: customer2.id, title: 'let me in', price: 100000, frequency: (subscription.frequency + 1), status: 1 }, headers: valid_headers, as: :json
+        subscription.reload
+        expect(subscription.status).to eq('active')
+
+        expect(subscription.customer_id).to eq(customer.id)
+        expect(subscription.title).to eq(initial_values[:title])
+        expect(subscription.frequency).to eq(initial_values[:frequency])
+
+        expect(subscription.customer_id).not_to eq(customer2.id)
+        expect(subscription.title).not_to eq('let me in')
+        expect(subscription.price).not_to eq(100000)
+      end
+
       context 'subscribing' do
         it 'updates the requested subscription' do
           customer = create(:customer)
