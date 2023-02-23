@@ -53,7 +53,6 @@ RSpec.describe "/subscriptions", type: :request do
 
         it "renders a JSON response with the subscription" do
           customer = create(:customer)
-          subscription = create(:subscription)
           subscription = create(:subscription, customer: customer, status: 0)
           patch subscription_url(subscription),
                 params: { id: customer.id, new_status: 1 }, headers: valid_headers, as: :json
@@ -65,7 +64,6 @@ RSpec.describe "/subscriptions", type: :request do
       context "unsubscribing" do
         it "updates the requested subscription" do
           customer = create(:customer)
-          subscription = create(:subscription)
           subscription = create(:subscription, customer: customer, status: 1)
           patch subscription_url(subscription),
                 params: { id: customer.id, new_status: 0 }, headers: valid_headers, as: :json
@@ -75,7 +73,6 @@ RSpec.describe "/subscriptions", type: :request do
 
         it "renders a JSON response with the subscription" do
           customer = create(:customer)
-          subscription = create(:subscription)
           subscription = create(:subscription, customer: customer, status: 1)
           patch subscription_url(subscription),
                 params: { id: customer.id, new_status: 0 }, headers: valid_headers, as: :json
@@ -88,7 +85,6 @@ RSpec.describe "/subscriptions", type: :request do
     context "with invalid parameters" do
       it "renders a JSON response with errors for the subscription" do
         customer = create(:customer)
-        subscription = create(:subscription)
         subscription = create(:subscription, customer: customer)
         patch subscription_url(subscription),
               params: { subscription: invalid_attributes }, headers: valid_headers, as: :json

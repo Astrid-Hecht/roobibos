@@ -17,15 +17,20 @@ RSpec.describe "/customers", type: :request do
   describe "GET /show" do
     it "renders a successful response" do
       customer = create(:customer)
-      get customer_url(customer), as: :json
+      create_list(:subscription, 5, customer: customer)
+      get "/api/v1/customers/#{customer.id}"
       expect(response).to be_successful
       body = JSON.parse(response.body, symbolize_names: true)
       expect(body).to be_a Hash
-      expect(body.keys).to eq([:customer_id, :subscriptions])
-      expect(body[:customer_id]).to match(/d+/)
-      expect(body[:subscriptions]).to be_an Array
-      expect(body[:subscriptions][0]).to be_a Hash
-      expect(body[:subscriptions][0].keys).to eq([:title, :price, :status, :frequency])
+      expect(body.keys).to eq([:data])
+      expect(body[:data].keys).to eq([:id, :type, :attributes])
+      expect(body[:data][:id]).to match(/^[0-9]*[1-9][0-9]*$/)
+      expect(body[:data][:type]).to eq("customer")
+      expect(body[:data][:attributes]).to be_a Hash
+      expect(body[:data][:attributes].keys).to eq([:first_name, :last_name, :email, :address, :subscriptions])
+      expect(body[:data][:attributes][:subscriptions]).to be_an Array
+      expect(body[:data][:attributes][:subscriptions][0].keys).to eq([:id, :customer_id, :title, :price, :status, :frequency, :created_at, :updated_at])
+      expect(body[:data][:attributes][:subscriptions][0][:customer_id]).to eq(customer.id)
     end
   end
 end
