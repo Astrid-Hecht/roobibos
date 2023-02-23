@@ -1,42 +1,15 @@
-class SubscriptionsController < ApplicationController
+class Api::V1::SubscriptionsController < ApplicationController
   before_action :set_subscription, only: [:show, :update, :destroy]
-
-  # GET /subscriptions
-  def index
-    @subscriptions = Subscription.all
-
-    render json: @subscriptions
-  end
-
-  # GET /subscriptions/1
-  def show
-    render json: @subscription
-  end
-
-  # POST /subscriptions
-  def create
-    @subscription = Subscription.new(subscription_params)
-
-    if @subscription.save
-      render json: @subscription, status: :created, location: @subscription
-    else
-      render json: @subscription.errors, status: :unprocessable_entity
-    end
-  end
 
   # PATCH/PUT /subscriptions/1
   def update
     if @subscription.update(subscription_params)
-      render json: @subscription
+      render json: SubscriptionSerializer.new(@subscription)
     else
       render json: @subscription.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /subscriptions/1
-  def destroy
-    @subscription.destroy
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
