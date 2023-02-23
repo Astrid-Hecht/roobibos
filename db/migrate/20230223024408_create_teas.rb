@@ -4,7 +4,7 @@ class CreateTeas < ActiveRecord::Migration[5.2]
       t.string :title
       t.string :description
       t.float :temperature
-      t.int :brew_time
+      t.integer :brew_time
 
       t.timestamps
     end
