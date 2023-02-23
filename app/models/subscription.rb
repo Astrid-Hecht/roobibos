@@ -5,7 +5,7 @@ class Subscription < ApplicationRecord
   validates :status, presence: true
   validates :frequency, presence: true
 
-  belongs_to :customer, dependent: :destroy
+  has_many :customers, through: :customer_subscriptions
   has_many :subscription_teas
   has_many :teas, through: :subscription_teas
 end
