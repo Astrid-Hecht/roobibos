@@ -21,6 +21,7 @@ RSpec.describe "/customers", type: :request do
       get "/api/v1/customers/#{customer.id}"
       expect(response).to be_successful
       body = JSON.parse(response.body, symbolize_names: true)
+      binding.pry
       expect(body).to be_a Hash
       expect(body.keys).to eq([:data])
       expect(body[:data].keys).to eq([:id, :type, :attributes])
