@@ -92,87 +92,45 @@
           null
         ]
       },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/mailers/application_mailer.rb": {
+      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/api/v1/subscriptions_controller.rb": {
         "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          1,
+          1,
+          null,
+          null,
+          1,
+          5,
+          4,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          5,
+          null,
+          null,
+          null,
+          1,
+          5,
+          null,
+          null
+        ]
       },
       "/Users/astrid/z_turing/4m/projects/roobibos/app/serializers/subscription_serializer.rb": {
         "lines": [
-          0,
-          0,
+          1,
+          1,
           null,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/jobs/application_job.rb": {
-        "lines": [
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/controllers/api/v1/subscriptions_controller.rb": {
-        "lines": [
-          0,
-          0,
+          1,
           null,
-          null,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          null,
-          0,
-          0,
-          0,
-          null,
-          null,
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/channels/application_cable/connection.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
-      },
-      "/Users/astrid/z_turing/4m/projects/roobibos/app/channels/application_cable/channel.rb": {
-        "lines": [
-          0,
-          0,
-          0,
-          0
-        ],
-        "branches": {
-        }
+          null
+        ]
       }
     },
-    "timestamp": 1677135280
+    "timestamp": 1677136019
   }
 }
