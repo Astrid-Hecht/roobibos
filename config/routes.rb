@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :customers, only: [:show]
+      patch "/subscriptions", to: 'subscriptions#update_zero_knowledge'
       resources :subscriptions, only: [:update]
     end
   end
