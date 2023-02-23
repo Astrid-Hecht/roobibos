@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :create_subscription_teas
+  resources :subscription_teas
   resources :subscriptions
   resources :customers
   resources :teas
