@@ -32,5 +32,20 @@ RSpec.describe "/customers", type: :request do
       expect(body[:data][:attributes][:subscriptions][0].keys).to eq([:id, :customer_id, :title, :price, :status, :frequency, :created_at, :updated_at])
       expect(body[:data][:attributes][:subscriptions][0][:customer_id]).to eq(customer.id)
     end
+
+    it "renders a 404 error if customer isn't found" do
+      customer = create(:customer)
+      create_list(:subscription, 5, customer: customer)
+      get "/api/v1/customers/#{customer.id + 1}"
+      expect(response).not_to be_successful
+      body = JSON.parse(response.body, symbolize_names: true)
+      expect(body).to be_a Hash
+      expect(body.keys).to eq([:error])
+      expect(body[:error]).to be_a Array
+      expect(body[:error][0].keys).to eq([:status, :message, :code])
+      expect(body[:error][0][:status]).to eq("NOT FOUND")
+      expect(body[:error][0][:message]).to eq("Object with matching id not found")
+      expect(body[:error][0][:code]).to eq(404)
+    end
   end
 end
