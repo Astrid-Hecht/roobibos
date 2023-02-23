@@ -12,84 +12,86 @@ require 'rails_helper'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/subscriptions", type: :request do
+RSpec.describe '/subscriptions', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # CustomerSubscription. As you add validations to CustomerSubscription, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
 
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  let(:invalid_attributes) do
+    { title: 2334,
+      price: 'hello',
+      status: '',
+      frequency: 'twice' }
+  end
 
   # This should return the minimal set of values that should be in the headers
   # in order to pass any filters (e.g. authentication) defined in
   # CustomerSubscriptionsController, or in your router and rack
   # middleware. Be sure to keep this updated too.
-  let(:valid_headers) {
+  let(:valid_headers) do
     { 'CONTENT_TYPE' => 'application/json' }
-  }
+  end
 
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes_sub) {
-        skip("Add a hash of attributes valid for your model")
-      }
-      let(:new_attributes_unsub) {
-        skip("Add a hash of attributes valid for your model")
-      }
+  describe 'PATCH /update' do
+    context 'with valid parameters' do
+      let(:new_attributes_sub) do
+        skip('Add a hash of attributes valid for your model')
+      end
+      let(:new_attributes_unsub) do
+        skip('Add a hash of attributes valid for your model')
+      end
 
-      context "subscribing" do
-        it "updates the requested subscription" do
+      context 'subscribing' do
+        it 'updates the requested subscription' do
           customer = create(:customer)
           subscription = create(:subscription, customer: customer, status: 0)
-          patch subscription_url(subscription),
-                params: { id: customer.id, new_status: 1 }, headers: valid_headers, as: :json
+          expect(subscription.status).to eq("inactive")
+          patch api_v1_subscription_url(subscription),
+                params: { id: subscription.id, status: 1 }, headers: valid_headers, as: :json
           subscription.reload
-          skip("Add assertions for updated state")
+          expect(subscription.status).to eq("active")
         end
 
-        it "renders a JSON response with the subscription" do
+        it 'renders a JSON response with the subscription' do
           customer = create(:customer)
           subscription = create(:subscription, customer: customer, status: 0)
-          patch subscription_url(subscription),
-                params: { id: customer.id, new_status: 1 }, headers: valid_headers, as: :json
+          patch api_v1_subscription_url(subscription),
+                params: { id: subscription.id, status: 1 }, headers: valid_headers, as: :json
           expect(response).to have_http_status(:ok)
-          expect(response.content_type).to match(a_string_including("application/json"))
+          expect(response.content_type).to match(a_string_including('application/json'))
         end
       end
 
-      context "unsubscribing" do
-        it "updates the requested subscription" do
+      context 'unsubscribing' do
+        it 'updates the requested subscription' do
           customer = create(:customer)
           subscription = create(:subscription, customer: customer, status: 1)
-          patch subscription_url(subscription),
-                params: { id: customer.id, new_status: 0 }, headers: valid_headers, as: :json
+          expect(subscription.status).to eq("active")
+          patch api_v1_subscription_url(subscription),
+                params: { id: subscription.id, status: 0 }, headers: valid_headers, as: :json
           subscription.reload
-          skip("Add assertions for updated state")
+          expect(subscription.status).to eq("inactive")
         end
 
-        it "renders a JSON response with the subscription" do
+        it 'renders a JSON response with the subscription' do
           customer = create(:customer)
           subscription = create(:subscription, customer: customer, status: 1)
-          patch subscription_url(subscription),
-                params: { id: customer.id, new_status: 0 }, headers: valid_headers, as: :json
+          patch api_v1_subscription_url(subscription),
+                params: { id: subscription.id, status: 0 }, headers: valid_headers, as: :json
           expect(response).to have_http_status(:ok)
-          expect(response.content_type).to match(a_string_including("application/json"))
+          expect(response.content_type).to match(a_string_including('application/json'))
         end
       end
     end
 
-    context "with invalid parameters" do
-      it "renders a JSON response with errors for the subscription" do
+    context 'with invalid parameters' do
+      it 'renders a JSON response with errors for the subscription' do
         customer = create(:customer)
         subscription = create(:subscription, customer: customer)
-        patch subscription_url(subscription),
+        patch api_v1_subscription_url(subscription),
               params: { subscription: invalid_attributes }, headers: valid_headers, as: :json
         expect(response).to have_http_status(:unprocessable_entity)
-        expect(response.content_type).to match(a_string_including("application/json"))
+        expect(response.content_type).to match(a_string_including('application/json'))
       end
     end
   end
