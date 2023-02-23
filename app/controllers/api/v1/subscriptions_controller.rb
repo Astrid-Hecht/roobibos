@@ -15,8 +15,9 @@ module Api
       def update_zero_knowledge
         return render_bad_request unless params[:id].present?
         return render_id_not_found unless set_subscription.present?
+        return render_bad_request unless valid_status?
 
-        if valid_status? && @subscription.update(subscription_params)
+        if @subscription.update(subscription_params)
           render json: SubscriptionSerializer.new(@subscription)
         else
           render json: @subscription.errors, status: :unprocessable_entity

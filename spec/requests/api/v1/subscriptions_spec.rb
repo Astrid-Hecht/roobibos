@@ -20,7 +20,7 @@ RSpec.describe '/subscriptions', type: :request do
   let(:invalid_attributes) do
     { title: 2334,
       price: 'hello',
-      status: 'f',
+      status: "f",
       frequency: 'twice' }
   end
 
@@ -160,7 +160,7 @@ RSpec.describe '/subscriptions', type: :request do
         subscription = create(:subscription, customer: customer)
         patch api_v1_subscriptions_url,
               params: { subscription: invalid_attributes, id: subscription.id }, headers: valid_headers, as: :json
-        expect(response).to have_http_status(:unprocessable_entity)
+        expect(response).to have_http_status(:bad_request)
         expect(response.content_type).to match(a_string_including('application/json'))
       end
     end
