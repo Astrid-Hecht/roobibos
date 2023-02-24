@@ -29,7 +29,7 @@ Beyond the base requirements, include any additional endpoints you’d like, but
   * Run `bundle install`
   * Run `rails db:{create,migrate,seed}`
   * Run `rails s`
-  * And you're good to go! The endpoint will be accessible on your chosen port through tools like [Postman](https://www.postman.com/)
+  * And you're good to go! The endpoints will be accessible on your chosen port through tools like [Postman](https://www.postman.com/)
 
 #### Testing
 
