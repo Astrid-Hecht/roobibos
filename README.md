@@ -1,4 +1,4 @@
-# Roobibos (Ruby + Rooibos) Tea API
+# Roobibos (Ruby + Rooibos) Tea API Take Home Challenge
 <br>
 
 ### Project Description
