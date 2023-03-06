@@ -2,7 +2,7 @@
 <br>
 
 ### Project Description
-   This was a small take home challenge that focuses on rapidly implementing an API in Rails with a small web of relationships (customers, subscriptions, and teas) meant to represent one that might be used by a tea subscription box service. The MVP only covered exposing enough endpoints to view a customer's subscriptions and to subscribe or unsubscribe the customer from them at a seperate endpoint.
+   This was a small take home challenge that focused on rapidly implementing an API in Rails with a small web of relationships (customers, subscriptions, and teas) meant to represent one that might be used by a tea subscription box service. The MVP only covered exposing enough endpoints to view a customer's subscriptions and to subscribe or unsubscribe the customer from them at a seperate endpoint.
 <br>
 
 
