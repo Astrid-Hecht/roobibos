@@ -88,7 +88,7 @@ Beyond the base requirements, include any additional endpoints you’d like, but
     ```
 
 ### Future Plans
-  * Use time before it's due to refactor the db to have a many to many relationship between customers and subscriptions. This would allow the service to release subsription options with pre-set parameters that many users could subscribe to. Transitioning the current subscription relation to a custom subsription option would allow for the current flexibility of subscriptions to persist in a different form.
+  * Refactor the db to have a many-to-many relationship between customers and subscriptions. This would allow the the Roobibos company to release subscription options with a pre-set tea variety that many users could subscribe to. Transitioning the current subscription relation to a custom subsription option would allow for the current customization of subscriptions to persist in a different form.
   * Add more endpoints for fully fleshed out CRUD functionality
   * Add endpoints to see most popular subscriptions
   * Implement an API key and user authentication system to restrict API access
